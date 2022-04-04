@@ -1,5 +1,7 @@
 package com.iflytek.servlet;
 
+import com.iflytek.po.User;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -28,6 +30,10 @@ public class LoginServlet extends HttpServlet {
         String password=request.getParameter("password");//获取密码
         //验证登录的方式、、通过用户名和密码
         if(username.equals("admin")&& password.equals("123")){
+            User user=new User();
+            user.setUsername("admin");
+            user.setPassword("123");
+            request.getSession().setAttribute("loginUser",user);
             //response.getWriter().write("登录成功");
             //将获取到的用户名带到页面
             HttpSession session=request.getSession();
@@ -38,6 +44,7 @@ public class LoginServlet extends HttpServlet {
         }else{
             //如果登录失败，跳转到登录页面
             //sendRedirect重定向
+            request.setAttribute("msg","您输入的账号或密码有误");
             response.sendRedirect("login.jsp");
         }
     }

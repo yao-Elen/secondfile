@@ -12,6 +12,9 @@
 </head>
 <body>
 我是登录后的页面
-${username}
+name:${loginUser.username}
+<br>
+id:${loginUser.password}
+<a href="logoutServlet">退出</a>
 </body>
 </html>

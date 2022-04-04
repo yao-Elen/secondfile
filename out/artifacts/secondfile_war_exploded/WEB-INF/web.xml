@@ -3,4 +3,15 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+    <context-param>
+        <param-name>Author</param-name>
+        <param-value>jack</param-value>
+    </context-param>
+    <context-param>
+        <param-name>lastModifiedTime</param-name>
+        <param-value>2022.3.22</param-value>
+    </context-param>
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
 </web-app>

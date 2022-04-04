@@ -53,7 +53,7 @@
         <a class="forget" href="javascript:">忘记密码</a>
 
     </div>
-
+消息提示 ${msg}
 </div>
 </form>
 <%
