@@ -26,26 +26,27 @@ public class LoginServlet extends HttpServlet {
         //设置响应是的字符编码
         response.setCharacterEncoding("utf-8");
         /* PrintWriter pt=request.*/
-        String username=request.getParameter("username");//获取用户名
-        String password=request.getParameter("password");//获取密码
+        String username = request.getParameter("username");//获取用户名
+        String password = request.getParameter("password");//获取密码
         //验证登录的方式、、通过用户名和密码
-        if(username.equals("admin")&& password.equals("123")){
-            User user=new User();
+        if (username.equals("admin") && password.equals("123")) {
+            User user = new User();
             user.setUsername("admin");
             user.setPassword("123");
-            request.getSession().setAttribute("loginUser",user);
+            request.getSession().setAttribute("loginUser", user);
             //response.getWriter().write("登录成功");
             //将获取到的用户名带到页面
-            HttpSession session=request.getSession();
+            HttpSession session = request.getSession();
             request.getAttribute("username");
             // 验证通过，跳转到首页
             //getRequestDispatcher转发
-            request.getRequestDispatcher("success.jsp").forward(request,response);
-        }else{
+            request.getRequestDispatcher("success.jsp").forward(request, response);
+        } else {
             //如果登录失败，跳转到登录页面
             //sendRedirect重定向
-            request.setAttribute("msg","您输入的账号或密码有误");
-            response.sendRedirect("login.jsp");
+            request.setAttribute("msg", "您输入的账号或密码有误");
+            request.getRequestDispatcher("sussess.jsp").forward(request,response);
+            //response.sendRedirect("login.jsp");
         }
     }
 }
