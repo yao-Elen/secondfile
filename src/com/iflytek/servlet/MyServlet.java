@@ -1,5 +1,8 @@
 package com.iflytek.servlet;
 
+import com.iflytek.po.Config;
+
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,5 +20,8 @@ public class MyServlet  extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.getWriter().println("hello MyServlet");
+        ServletContext sc=req.getServletContext();
+        Config config=(Config)sc.getAttribute("config");//获取配置信息
+        resp.getWriter().println(config.getAuthor());
     }
 }

@@ -31,4 +31,7 @@
         <url-pattern>/count.jsp</url-pattern>
     </filter-mapping>
 
+    <listener>
+        <listener-class>com.iflytek.listener.MyServletContextListener</listener-class>
+    </listener>
 </web-app>
