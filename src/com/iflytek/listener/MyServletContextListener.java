@@ -4,7 +4,9 @@ import com.iflytek.po.Config;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextListener;
+import javax.servlet.annotation.WebListener;
 
+@WebListener
 public class MyServletContextListener implements ServletContextListener {
     //全局配置的加载
     @Override
