@@ -3,7 +3,8 @@ package com.iflytek.filter;
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
-@WebFilter(filterName = "forwardFilter",urlPatterns = "/first.jsp",dispatcherTypes = DispatcherType.FORWARD)
+
+@WebFilter(filterName = "forwardFilter", urlPatterns = "/first.jsp", dispatcherTypes = DispatcherType.FORWARD)
 public class ForwardFilter implements Filter {
 
     @Override

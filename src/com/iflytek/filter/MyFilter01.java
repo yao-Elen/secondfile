@@ -4,7 +4,7 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 
-@WebFilter(filterName = "MyFilter02",servletNames = {"MyServlet"},urlPatterns={"/MyServlet"})
+@WebFilter(filterName = "MyFilter02", servletNames = {"MyServlet"}, urlPatterns = {"/MyServlet"})
 public class MyFilter01 implements Filter {
 
     @Override
@@ -15,7 +15,7 @@ public class MyFilter01 implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         servletResponse.getWriter().write("Hello MyFilter01");
-        filterChain.doFilter(servletRequest,servletResponse);
+        filterChain.doFilter(servletRequest, servletResponse);
     }
 
     @Override
