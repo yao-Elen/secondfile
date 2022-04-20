@@ -1,7 +1,9 @@
 package com.iflytek.listener;
 
 import javax.servlet.ServletRequestListener;
+import javax.servlet.annotation.WebListener;
 
+@WebListener
 public class MyServletRequestListener implements ServletRequestListener {
     /**
      * 在请求初始化之前调用
