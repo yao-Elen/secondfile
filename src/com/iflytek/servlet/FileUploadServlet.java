@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 @WebServlet("/fileUpload")
-@MultipartConfig
+@MultipartConfig      // 文件上传配置
 public class FileUploadServlet extends HttpServlet {
 
     @Override
@@ -22,7 +22,9 @@ public class FileUploadServlet extends HttpServlet {
     }
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+        resp.setCharacterEncoding("utf-8");
+        resp.setHeader("Content-type", "text/html;charset=utf-8");
+        req.setCharacterEncoding("utf-8");
         String username=req.getParameter("username");
         //获取文件的上传
         Part part=req.getPart("imge");
@@ -58,7 +60,7 @@ public class FileUploadServlet extends HttpServlet {
         }
         is.close();
         out.close();
-        resp.getWriter().write("上传成功");
+        resp.getWriter().write("恭喜你，上传成功，欢迎再次上传");
     }
 
 
