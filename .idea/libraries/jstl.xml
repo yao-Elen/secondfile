@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="jstl">
+    <CLASSES>
+      <root url="jar://D:/JavaWeb实训/BMS_V1.0/WebContent/WEB-INF/lib/jstl.jar!/" />
+      <root url="jar://D:/JavaWeb实训/BMS_V1.0/WebContent/WEB-INF/lib/mysql-connector-java-5.1.13-bin.jar!/" />
+      <root url="jar://D:/JavaWeb实训/BMS_V1.0/WebContent/WEB-INF/lib/standard.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/第一组-外卖订购平台/waimai/WebContent/WEB-INF/lib/standard.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/第一组-外卖订购平台/waimai/WebContent/WEB-INF/lib/jstl.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/小项目/小项目/student/WebContent/WEB-INF/lib/mysql-connector-java-8.0.17.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

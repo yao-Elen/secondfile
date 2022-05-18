@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-//@WebFilter(filterName = "filterip",initParams = {@WebInitParam(name="startIp",value="127.0.0.2"),@WebInitParam(name="endIp",value="127.0.0.5")},urlPatterns = "/*")
+//@WebFilter(filterName = "filterip",initParams = {@WebInitParam(name="startIp",value="192.0.0.2"),@WebInitParam(name="endIp",value="192.0.0.5")},urlPatterns = "/*")
 public class FiltIp implements Filter {
     private FilterConfig filterConfig;
     private int startIp; // 起始IP地址
@@ -37,7 +37,8 @@ public class FiltIp implements Filter {
         if (ip < startIp || ip > endIp) {
             request.getRequestDispatcher("filtip.jsp").forward(request, response);
         } else {
-            request.getRequestDispatcher("success.jsp").forward(request, response);
+          response.sendRedirect("success.jsp");
+           // request.getRequestDispatcher("success.jsp").forward(request, response);
         }
         filterChain.doFilter(servletRequest, servletResponse); // 调用下一个FILTER或调用资源
 
